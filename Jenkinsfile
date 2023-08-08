@@ -12,6 +12,17 @@ pipeline {
                 bat 'npm i'
             }
         }
+        stage('Testing') {
+            steps {
+                bat 'npx cypress run'
+            }
+        }
+    }
+
+    post{
+        always{
+            publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'cypress/report', reportFiles: 'mochawesome.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
+        }
     }
 
     post{

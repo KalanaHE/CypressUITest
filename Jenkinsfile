@@ -1,6 +1,6 @@
 pipeline {
     agent any
-tools {nodejs "Node14"}
+    tools {nodejs "Node14"}
 
    environment {
        CHROME_BIN = '/bin/google-chrome'
@@ -9,7 +9,7 @@ tools {nodejs "Node14"}
     stages {
         stage('Dependacies') {
             steps {
-                sh 'npm i'
+                bat 'npm i'
             }
         }
     }

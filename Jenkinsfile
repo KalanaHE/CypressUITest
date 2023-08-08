@@ -11,6 +11,9 @@ pipeline {
             steps {
                 bat 'npm i'
             }
+            steps {
+                bat 'npx cypress run'
+            }
         }
     }
 }

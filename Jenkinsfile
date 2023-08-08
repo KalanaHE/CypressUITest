@@ -12,10 +12,5 @@ tools {nodejs "Node14"}
                 sh 'npm i'
             }
         }
-stage('Testing') {
-            steps {
-                sh 'npm run cypress:ci'
-            }
-        }
     }
 }

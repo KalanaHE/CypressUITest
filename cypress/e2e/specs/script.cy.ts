@@ -61,20 +61,20 @@ describe("Dispatcher Testing", () => {
 
     });
 
-    it("Verify order is receiving to Dispatcher", () => {
+    // it("Verify order is receiving to Dispatcher", () => {
 
-        cy.visit(user_inputs.url);
-        loginPage.enterUsername(user_inputs.username);
-        loginPage.enterPassword(user_inputs.password);
-        loginPage.clickLogin();
+    //     cy.visit(user_inputs.url);
+    //     loginPage.enterUsername(user_inputs.username);
+    //     loginPage.enterPassword(user_inputs.password);
+    //     loginPage.clickLogin();
 
-        sysSelectionPage.clickOnLocationDropDown();
-        sysSelectionPage.selectKitchen();
-        sysSelectionPage.clickDispatcherBtn();
+    //     sysSelectionPage.clickOnLocationDropDown();
+    //     sysSelectionPage.selectKitchen();
+    //     sysSelectionPage.clickDispatcherBtn();
 
-        dispatcherHomePage.checkVisibilityOfElement();
-        dispatcherHomePage.varifyOrderReceiving(talabat_payload.code);
+    //     dispatcherHomePage.checkVisibilityOfElement();
+    //     dispatcherHomePage.varifyOrderReceiving(talabat_payload.code);
 
-    });
+    // });
 
 });

@@ -9,8 +9,8 @@
     "test": "echo Test",
     "cy-test": "cypress run",
     "test:cli": "npx cypress run",
-    "merge:reports": "mochawesome-merge mochawesome-report/*.json > index.json",
-    "create:html:report": "npm run merge:reports && marge --reportDir TestReport index.json"
+    "merge:reports": "mochawesome-merge mochawesome-report/*.json > cypress-combined-report.json",
+    "create:html:report": "npm run merge:reports && marge --reportDir TestReport cypress-combined-report.json"
   },
   "keywords": [],
   "author": "",

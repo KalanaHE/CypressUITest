@@ -10,7 +10,7 @@ export default defineConfig({
   },
   "reporter": "../node_modules/mochawesome/src/mochawesome.js",
   "reporterOptions": {
-    "overwrite": false,
+    "overwrite": true,
     "html": false,
     "json": true,
   }

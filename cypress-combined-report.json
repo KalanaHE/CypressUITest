@@ -12,13 +12,13 @@
     "hasOther": false,
     "skipped": 0,
     "hasSkipped": false,
-    "start": "2023-08-09T14:01:56.321Z",
-    "end": "2023-08-09T14:02:21.170Z",
-    "duration": 24849
+    "start": "2023-08-09T14:09:42.336Z",
+    "end": "2023-08-09T14:10:02.554Z",
+    "duration": 20218
   },
   "results": [
     {
-      "uuid": "7c2b58d5-d043-4a86-8a64-a77d8559a9c5",
+      "uuid": "4b05c4b2-113a-4f1d-a6c5-08780441323e",
       "title": "",
       "fullFile": "cypress\\e2e\\specs\\script.cy.ts",
       "file": "cypress\\e2e\\specs\\script.cy.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "02969431-91b4-4ad2-ba52-beb170bb96f8",
+          "uuid": "e0769686-2388-4559-869b-70a84a10b621",
           "title": "Dispatcher Testing",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Verify Dispatcher Login",
               "fullTitle": "Dispatcher Testing Verify Dispatcher Login",
               "timedOut": null,
-              "duration": 15738,
+              "duration": 14551,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "cy.visit(user_inputs.url);\nloginPage.enterUsername(user_inputs.username);\nloginPage.enterPassword(user_inputs.password);\nloginPage.clickLogin();\nsysSelectionPage.clickOnLocationDropDown();\nsysSelectionPage.selectKitchen();\nsysSelectionPage.clickDispatcherBtn();\ndispatcherHomePage.checkVisibilityOfElement();",
               "err": {},
-              "uuid": "1a26bf19-d71d-4858-91fa-88835091c933",
-              "parentUUID": "02969431-91b4-4ad2-ba52-beb170bb96f8",
+              "uuid": "a82cdf3a-a48c-4a3a-85d8-c32b39a6be2f",
+              "parentUUID": "e0769686-2388-4559-869b-70a84a10b621",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Verify create an delivery by Restaurant order (Talabat)",
               "fullTitle": "Dispatcher Testing Verify create an delivery by Restaurant order (Talabat)",
               "timedOut": null,
-              "duration": 3986,
+              "duration": 3313,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -65,21 +65,21 @@
               "context": null,
               "code": "cy.request({\n    method: 'POST',\n    url: user_details.talabaturl,\n    body: talabat_payload\n}).then((res) => {\n    expect(res.status).to.be.equal(202);\n});",
               "err": {},
-              "uuid": "16362c11-6148-4db8-b403-5fec074ffe86",
-              "parentUUID": "02969431-91b4-4ad2-ba52-beb170bb96f8",
+              "uuid": "7c9d788b-faf8-4653-b435-c6949ee49050",
+              "parentUUID": "e0769686-2388-4559-869b-70a84a10b621",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "1a26bf19-d71d-4858-91fa-88835091c933",
-            "16362c11-6148-4db8-b403-5fec074ffe86"
+            "a82cdf3a-a48c-4a3a-85d8-c32b39a6be2f",
+            "7c9d788b-faf8-4653-b435-c6949ee49050"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 19724,
+          "duration": 17864,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -113,7 +113,7 @@
     },
     "marge": {
       "options": {
-        "overwrite": false,
+        "overwrite": true,
         "html": false,
         "json": true
       },

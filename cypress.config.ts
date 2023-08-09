@@ -8,12 +8,10 @@ export default defineConfig({
       // implement node event listeners here
     },
   },
-  "reporter": "mochawesome",
+  "reporter": "../node_modules/mochawesome/src/mochawesome.js",
   "reporterOptions": {
-    "charts": true,
     "overwrite": false,
     "html": false,
     "json": true,
-    "reportDir": "cypress/report"
   }
 });

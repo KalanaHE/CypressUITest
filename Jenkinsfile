@@ -14,14 +14,19 @@ pipeline {
         }
         stage('Testing') {
             steps {
-                bat 'npx cypress run'
+                bat 'npm run test:cli'
+            }
+        }
+        stage('Test Report') {
+            steps {
+                bat 'npm run create:html:report'
             }
         }
     }
 
     post{
         always{
-            publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'cypress/report', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
+            publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'cypress/TestReport', reportFiles: 'cypress-combined-report.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
         }
     }
     

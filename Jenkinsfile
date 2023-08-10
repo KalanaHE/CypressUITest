@@ -7,17 +7,17 @@ pipeline {
       
    }
     stages {
-        stage('Dependacies') {
+        stage('Dependacy Install') {
             steps {
                 bat 'npm i'
             }
         }
-        stage('Testing') {
+        stage('Running Test Script') {
             steps {
                 bat 'npm run test:cli'
             }
         }
-        stage('Test Report') {
+        stage('Generate Test Report') {
             steps {
                 bat 'npm run create:html:report'
             }

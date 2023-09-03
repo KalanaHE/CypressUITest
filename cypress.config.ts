@@ -1,6 +1,7 @@
 import { defineConfig } from "cypress";
 
 export default defineConfig({
+  projectId: "jwjjkx",
   e2e: {
     watchForFileChanges: false,
     defaultCommandTimeout: 10000,
